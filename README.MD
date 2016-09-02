@@ -16,9 +16,9 @@ Without getting too deep into HOW multple servers are handled.  Much of the func
 
 This example would support the following URL's:
 
-- <span>www.example.com</span>
-- http\://www.web.example.com
-- http\://www.dev.example.com
+- www&#46;example&#46;com
+- www.web.example.com
+- www.dev.example.com
 
 ```
     $ORIGIN example.com.
