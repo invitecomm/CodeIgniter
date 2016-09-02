@@ -19,9 +19,18 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-		$this->load->view('welcome_message');
-		$this->output->append_output($_SERVER['CI_ENV']);
-		$this->output->append_output($this->config->item('base_url'));
+	{		
+		$data['me_env'] = $_SERVER['CI_ENV'];
+		$data['me_url'] = $this->config->item('base_url');
+		
+		$this->config->load('custom');
+		
+		$data['cu_name'] = $this->config->item('custom_name');
+		$data['cu_string'] = $this->config->item('custom_string');
+
+
+		$this->load->view('welcome_message',$data);
+		//$this->output->append_output($_SERVER['CI_ENV']);
+		//$this->output->append_output($this->config->item('base_url'));
 	}
 }

@@ -68,18 +68,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>Dynamic CodeIgniter Multi-Environment Page</h1>
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
+		<p>The CodeIgniter system ENVIRONMENT setting is:</p>
+		<code><?=strtoupper($me_env)?></code>
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
+		<p>The base_url found in /application/config/<?=$me_env?>/config.php:</p>
+		<code><?=$me_url?></code>
+		
+		<p><?=$cu_name?></p>
+		<p>Uses data in /application/config/<?=$me_env?>/custom.php or /application/config/custom.php:</p>
+		<code><?=$cu_string?></code>
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+<h2>.htaccess</h2>
+		<p>The .htacess files is configured to use wildcards.  www.example.com, www.web7.example.com, www.dev.example.com, even www.dev33.example.com.  This will work with any domain, you just need to adjust the subdomain settings.</p>
+		<code>
+<pre>
+SetEnvIf Host (.*).(.*).(.*)$ CI_ENV=production
+SetEnvIf Host (.*).web(.*).(.*).(.*)$ CI_ENV=testing
+SetEnvIf Host (.*).dev(.*).(.*).(.*)$ CI_ENV=development
+</pre>
+		</code>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
