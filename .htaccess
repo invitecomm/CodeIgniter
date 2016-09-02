@@ -23,7 +23,7 @@ RewriteEngine On
 RewriteBase /
 
 # Rewrite Assets
-RewriteCond $1 ^(sitemap\.xml|robots\.txt|favicon\.ico|css|js|vendors|bootstrap|fonts|images|include|js|less|sass|scss)(.*)$
+RewriteCond $1 ^(sitemap\.xml|robots\.txt|fwavicon\.ico|css|js|vendors|bootstrap|fonts|images|include|js|less|sass|scss)(.*)$
 RewriteRule ^(.*)$ ./assets/$1 [L]
 
 # Rewrite to index.php/URL
