@@ -23,7 +23,9 @@ This example would support the following URL's:
 #### Zone File
 ```
 $ORIGIN example.com.
-www.example.com.      IN CNAME    production.example.com.
+www					IN CNAME    production.example.com.
+production			IN A    N.N.N.1
+development			IN A    N.N.N.2
 
 $ORIGIN web.example.com.
 *.web.example.com.  IN CNAME    production.example.com.
