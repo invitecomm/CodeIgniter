@@ -4,7 +4,7 @@ This CodeIgniter branch demonstrates [Handling Multiple Environments](https://ww
 
 ## Use Case
 
-When working with CodeIgniter, we use different servers.  A server dedicated for development, and others are used in production.  Doing the development on `localhost` brings it's own complications.
+When working with CodeIgniter, we use different servers.  A server dedicated for development and others are used for production.  Doing the development on `localhost` brings it's own complications.
 
 ### How it's used 
 
@@ -21,6 +21,14 @@ SetEnvIf Host (.*).web(.*).(.*).(.*)$ CI_ENV=testing
 SetEnvIf Host (.*).dev(.*).(.*).(.*)$ CI_ENV=development
 ```
 _I wanted to use 'staging' instead of 'testing', but CodeIgniter did not like it._
+
+## CodeIgniter Configuration Class
+
+Leveraging the CodeIgniter [Config Class](https://www.codeigniter.com/user_guide/libraries/config.html), we can customize the settings based on the ENVIRONMENT.  Custom settings use the following directories:
+
+- application/config/production
+- application/config/testing
+- application/config/development
 
 ## Multiple Web Servers
 
