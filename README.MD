@@ -13,6 +13,13 @@ This branch used multiple Apache HTTP Servers.  It has been tested on the follow
 ## BIND
 
 Without getting too deep into HOW multple servers are handled.  Much of the functionality uses wildcards in BIND.  Many details are omitted.  Let me know if you need more information.
+
+This example would support the following URL's:
+
+- www.example.com
+- www.web.example.com
+- www.dev.example.com
+
 ```
     $ORIGIN example.com.
         www.example.com.      IN CNAME    production.example.com.
