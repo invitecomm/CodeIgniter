@@ -37,7 +37,7 @@ $ORIGIN dev.example.com.
 
 Using dynamic hosts on the Apache HTTP servers, provides a lot of flexibility when building a site.  Combined with the dynamic sub-domains described above, only the final host needs a dedicated entry in BIND.
 
-_Done't even need to modify the Apache configuration until the site is ready._
+_Dynamic host provide a lot of flexibility.  Can turn-up new content without modifying the Apache configuration.  Just create the symlinks, and it's ready to go._
 
 #### Dynamic Virtual Host Configuration
 ```
