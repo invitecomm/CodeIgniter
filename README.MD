@@ -2,11 +2,11 @@
 
 This CodeIgniter branch demonstrates [Handling Multiple Environments](https://www.codeigniter.com/user_guide/general/environments.html) using `.htaccess` on Apache.
 
-| FQDN        | CI_ENV           | Server  |
-| ------------- |:-------------:|:-----:|
-| anything.domain.tld       | production | production |
-| anything.web*.domain.tld     | testing      |   production |
-| anything.dev*.domain.tld | development      |    development |
+| FQDN        | CI_ENV           | Server  | Use |
+| ------------- |:-------------:|:-----:|:-------:|
+| anything.domain.tld       | production | production | Production |
+| anything.web*.domain.tld     | testing      |   production | Staging |
+| anything.dev*.domain.tld | development      |    development | Development |
 
 #### .htaccess
 ```
