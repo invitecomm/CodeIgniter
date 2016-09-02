@@ -17,8 +17,8 @@ Without getting too deep into HOW multple servers are handled.  Much of the func
 This example would support the following URL's:
 
 - `www.example.com`
-- www.web.example.com
-- www.dev.example.com
+- `www.web.example.com`
+- `www.dev.example.com`
 
 ```
     $ORIGIN example.com.
