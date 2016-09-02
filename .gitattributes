@@ -12,7 +12,7 @@
 phpdoc.dist.xml export-ignore
 
 # Misc other files
-readme.rst
+# readme.rst
 
 # They don't want all of our tests...
 tests/codeigniter/ export-ignore
