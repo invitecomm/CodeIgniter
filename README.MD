@@ -2,6 +2,10 @@
 
 This CodeIgniter branch demonstrates [Handling Multiple Environments](https://www.codeigniter.com/user_guide/general/environments.html) using `.htaccess` on Apache.
 
+## Use Case
+
+When working with CodeIgniter, we use different servers.  A server dedicated for development, and others are used in production.
+
 | FQDN        | CI_ENV           | Server  | Use |
 | ------------- |:-------------:|:-----:|:-------:|
 | anything.domain.tld       | production | production | Production |
