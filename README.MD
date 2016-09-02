@@ -16,7 +16,7 @@ Without getting too deep into HOW multple servers are handled.  Much of the func
 
 This example would support the following URL's:
 
-- http\://www.example.com
+- <span>www.example.com</span>
 - http\://www.web.example.com
 - http\://www.dev.example.com
 
