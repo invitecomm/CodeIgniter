@@ -7,7 +7,6 @@ This CodeIgniter branch demonstrates [Handling Multiple Environments](https://ww
 | anything.domain.tld       | production | production | Production |
 | anything.web*.domain.tld     | testing      |   production | Staging |
 | anything.dev*.domain.tld | development      |    development | Development |
-<p style='color:red'>This is some red text.</p> 
 
 #### .htaccess
 ```
@@ -15,6 +14,7 @@ SetEnvIf Host (.*).(.*).(.*)$ CI_ENV=production
 SetEnvIf Host (.*).web(.*).(.*).(.*)$ CI_ENV=testing
 SetEnvIf Host (.*).dev(.*).(.*).(.*)$ CI_ENV=development
 ```
+_I wanted to use 'staging' instead of 'testing', but CodeIgniter did not like it._
 
 ## Multiple Web Servers
 
