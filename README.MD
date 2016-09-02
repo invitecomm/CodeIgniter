@@ -20,6 +20,7 @@ This example would support the following URL's:
 - `www.web.example.com`
 - `www.dev.example.com`
 
+#### Zone File
 ```
 $ORIGIN example.com.
 www.example.com.      IN CNAME    production.example.com.
