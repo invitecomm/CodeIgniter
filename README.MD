@@ -30,6 +30,8 @@ Leveraging the CodeIgniter [Config Class](https://www.codeigniter.com/user_guide
 - application/config/testing
 - application/config/development
 
+_Example are provided in this branch._
+
 ## Multiple Web Servers
 
 This branch used multiple Apache HTTP Servers.  It has been tested on the following Apache server versions.
