@@ -1,0 +1,33 @@
+#Options All -Indexes 
+Options All
+Allow from all 
+
+# Dynamically set CI_ENV based on host URL
+SetEnvIf Host (.*).(.*).(.*)$ CI_ENV=production
+SetEnvIf Host (.*).web(.*).(.*).(.*)$ CI_ENV=testing
+SetEnvIf Host (.*).dev(.*).(.*).(.*)$ CI_ENV=development
+# Tested on the following:
+#  Apache/2.2.15
+#  Apache/2.4.6
+
+
+DirectoryIndex index.php
+
+# Turn on URL rewriting
+RewriteEngine On
+
+# If your website begins from a folder e.g localhost/my_project then 
+# you have to change it to: RewriteBase /my_project/
+# If your site begins from the root e.g. example.local/ then
+# let it as it is
+RewriteBase /
+
+# Rewrite Assets
+RewriteCond $1 ^(sitemap\.xml|robots\.txt|favicon\.ico|css|js|vendors|bootstrap|fonts|images|include|js|less|sass|scss)(.*)$
+RewriteRule ^(.*)$ ./assets/$1 [L]
+
+# Rewrite to index.php/URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
