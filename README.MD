@@ -21,10 +21,12 @@ This example would support the following URL's:
 - `www.dev.example.com`
 
 ```
-    $ORIGIN example.com.
-        www.example.com.      IN CNAME    production.example.com.
-    $ORIGIN web.example.com.
-        *.web.example.com.  IN CNAME    production.example.com.
-    $ORIGIN dev.example.com.
-        *.dev.example.com.  IN CNAME    development.example.com.
+$ORIGIN example.com.
+www.example.com.      IN CNAME    production.example.com.
+
+$ORIGIN web.example.com.
+*.web.example.com.  IN CNAME    production.example.com.
+
+$ORIGIN dev.example.com.
+*.dev.example.com.  IN CNAME    development.example.com.
 ```
