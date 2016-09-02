@@ -24,12 +24,27 @@ This example would support the following URL's:
 ```
 $ORIGIN example.com.
 www					IN CNAME    production.example.com.
-production			IN A    N.N.N.1
-development			IN A    N.N.N.2
+production			IN A    	N.N.N.1
+development			IN A    	N.N.N.2
 
 $ORIGIN web.example.com.
 *.web.example.com.  IN CNAME    production.example.com.
 
 $ORIGIN dev.example.com.
 *.dev.example.com.  IN CNAME    development.example.com.
+```
+## Apache
+
+#### Symlinks
+
+`ln -s /var/www/html/symlinks/www/dev PATH/TO/development`
+`ln -s /var/www/html/symlinks/www/live PATH/TO/production`
+
+#### Dynamic Virtual Host Configuration
+```
+<VirtualHost *:80>
+    ServerName placeholdername
+    ServerAlias *.web.example.com
+    VirtualDocumentRoot /var/www/html/symlinks/%1/web
+</VirtualHost>
 ```
