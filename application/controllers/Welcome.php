@@ -21,5 +21,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('welcome_message');
+		$this->output->append_output($_SERVER['CI_ENV']);
+		$this->output->append_output($this->config->item('base_url'));
 	}
 }
