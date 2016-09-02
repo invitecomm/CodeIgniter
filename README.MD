@@ -42,13 +42,13 @@ Using dynamic hosts on the Apache HTTP servers, provides a lot of flexibility wh
 <VirtualHost *:80>
     ServerName placeholdername
     ServerAlias *.web.example.com
-    VirtualDocumentRoot /var/www/html/symlinks/%1/dev
+    VirtualDocumentRoot /var/www/html/project/symlinks/%1/dev
 </VirtualHost>
 
 <VirtualHost *:80>
     ServerName placeholdername
     ServerAlias *.dev.example.com
-    VirtualDocumentRoot /var/www/html/symlinks/%1/dev
+    VirtualDocumentRoot /var/www/html/project/symlinks/%1/dev
 </VirtualHost>
 ```
 
@@ -57,7 +57,7 @@ Using dynamic hosts on the Apache HTTP servers, provides a lot of flexibility wh
 <VirtualHost *:80>
     ServerName www.example.com
     ServerAlias example.com
-    VirtualDocumentRoot /var/www/html/symlinks/www/live
+    VirtualDocumentRoot /var/www/html/project/symlinks/www/live
 </VirtualHost>
 ```
 
@@ -65,5 +65,5 @@ Using dynamic hosts on the Apache HTTP servers, provides a lot of flexibility wh
 
 As you can see, `DocumentRoot` uses symbolic links.  This allows to quickly change the site content without the need to reload Apache.
 
-- `ln -s /var/www/html/symlinks/www/live PATH/TO/production`
-- `ln -s /var/www/html/symlinks/www/dev PATH/TO/development`
+- `ln -s /var/www/html/project/symlinks/www/live PATH/TO/production`
+- `ln -s /var/www/html/project/symlinks/www/dev PATH/TO/development`
