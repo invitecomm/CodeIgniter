@@ -7,6 +7,7 @@ This CodeIgniter branch demonstrates [Handling Multiple Environments](https://ww
 | anything.domain.tld       | production | production | Production |
 | anything.web*.domain.tld     | testing      |   production | Staging |
 | anything.dev*.domain.tld | development      |    development | Development |
+<p style='color:red'>This is some red text.</p> 
 
 #### .htaccess
 ```
