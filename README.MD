@@ -35,7 +35,7 @@ $ORIGIN dev.example.com.
 ```
 ## Apache
 
-Using dynamic hosts on the Apache HTTP servers, provides a lot of flexibility when building a site.  Combined with the dynamic sub-domains described above, only the final host needs a dedicated entry in BIND>. 
+Using dynamic hosts on the Apache HTTP servers, provides a lot of flexibility when building a site.  Combined with the dynamic sub-domains described above, only the final host needs a dedicated entry in BIND.
 
 #### Dynamic Virtual Host Configuration
 ```
@@ -57,6 +57,13 @@ Using dynamic hosts on the Apache HTTP servers, provides a lot of flexibility wh
 <VirtualHost *:80>
     ServerName www.example.com
     ServerAlias example.com
-    VirtualDocumentRoot /var/www/html/symlinks/%1/live
+    VirtualDocumentRoot /var/www/html/symlinks/www/live
 </VirtualHost>
 ```
+
+##### Symlinks
+
+As you can see, `DocumentRoot` uses symbolic links.  This allows to quickly change the site content without the need to reload Apache.
+
+- `ln -s /var/www/html/symlinks/www/live PATH/TO/production`
+- `ln -s /var/www/html/symlinks/www/dev PATH/TO/development`
