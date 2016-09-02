@@ -4,7 +4,9 @@ This CodeIgniter branch demonstrates [Handling Multiple Environments](https://ww
 
 ## Use Case
 
-When working with CodeIgniter, we use different servers.  A server dedicated for development, and others are used in production.
+When working with CodeIgniter, we use different servers.  A server dedicated for development, and others are used in production.  Doing the development on `localhost` brings it's own complications.
+
+### How it's used 
 
 | FQDN        | CI_ENV           | Server  | Use |
 | ------------- |:-------------:|:-----:|:-------:|
