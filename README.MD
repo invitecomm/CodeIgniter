@@ -2,6 +2,19 @@
 
 This CodeIgniter branch demonstrates [Handling Multiple Environments](https://www.codeigniter.com/user_guide/general/environments.html) using `.htaccess` on Apache.
 
+| FQDN        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| anything.domain.tld       | right-aligned | $1600 |
+| anything.web*.domain.tld     | centered      |   $12 |
+| anything.dev*.domain.tld | are neat      |    $1 |
+
+#### .htaccess
+```
+SetEnvIf Host (.*).(.*).(.*)$ CI_ENV=production
+SetEnvIf Host (.*).web(.*).(.*).(.*)$ CI_ENV=testing
+SetEnvIf Host (.*).dev(.*).(.*).(.*)$ CI_ENV=development
+```
+
 ## Multiple Web Servers
 
 This branch used multiple Apache HTTP Servers.  It has been tested on the following Apache server versions.
@@ -37,7 +50,7 @@ $ORIGIN dev.example.com.
 
 Using dynamic hosts on the Apache HTTP servers, provides a lot of flexibility when building a site.  Combined with the dynamic sub-domains described above, only the final host needs a dedicated entry in BIND.
 
-_Dynamic hosts provides a lot of flexibility.  Can turn-up new content without modifying the Apache configuration.  Just create the symlinks and it's ready to go._
+_Dynamic hosts provide a lot of flexibility.  Can turn-up new content without modifying the Apache configuration.  Just create the symlinks and it's ready to go._
 
 #### Dynamic Virtual Host Configuration
 ```
