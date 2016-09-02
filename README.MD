@@ -35,16 +35,28 @@ $ORIGIN dev.example.com.
 ```
 ## Apache
 
-#### Symlinks
-
-`ln -s /var/www/html/symlinks/www/dev PATH/TO/development`
-`ln -s /var/www/html/symlinks/www/live PATH/TO/production`
+Using dynamic hosts on the Apache HTTP servers, provides a lot of flexibility when building a site.  Combined with the dynamic sub-domains described above, only the final host needs a dedicated entry in BIND>. 
 
 #### Dynamic Virtual Host Configuration
 ```
 <VirtualHost *:80>
     ServerName placeholdername
     ServerAlias *.web.example.com
-    VirtualDocumentRoot /var/www/html/symlinks/%1/web
+    VirtualDocumentRoot /var/www/html/symlinks/%1/dev
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName placeholdername
+    ServerAlias *.dev.example.com
+    VirtualDocumentRoot /var/www/html/symlinks/%1/dev
+</VirtualHost>
+```
+
+#### Virtual Host Configuration
+```
+<VirtualHost *:80>
+    ServerName www.example.com
+    ServerAlias example.com
+    VirtualDocumentRoot /var/www/html/symlinks/%1/live
 </VirtualHost>
 ```
