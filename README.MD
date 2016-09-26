@@ -16,9 +16,9 @@ When working with CodeIgniter, we use different servers.  A server dedicated for
 
 #### Demo
 
-- [Production](http://flex.invite-comm.jp)
-- [Testing](http://flex.web4.invite-comm.jp)
-- [Development](http://flex.dev.invite-comm.jp)
+- [Production](http://flex.invite-comm.jp/multi)
+- [Testing](http://flex.web4.invite-comm.jp/multi)
+- [Development](http://flex.dev.invite-comm.jp/multi)
 
 
 #### .htaccess
