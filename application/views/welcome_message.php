@@ -72,6 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		<a href="https://github.com/invitecomm/CodeIgniter/blob/3.1-invite/README.MD">Back</a>
 
 		<p>The CodeIgniter system ENVIRONMENT setting is:</p>
 		<code><?=strtoupper($me_env)?></code>
