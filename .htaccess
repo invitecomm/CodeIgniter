@@ -10,7 +10,6 @@ SetEnvIf Host (.*).dev(.*).(.*).(.*)$ CI_ENV=development
 #  Apache/2.2.15
 #  Apache/2.4.6
 
-
 DirectoryIndex index.php
 
 # Turn on URL rewriting
