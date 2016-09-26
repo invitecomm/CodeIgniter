@@ -14,6 +14,13 @@ When working with CodeIgniter, we use different servers.  A server dedicated for
 | anything.web*.domain.tld     | testing      |   production | Staging |
 | anything.dev*.domain.tld | development      |    development | Development |
 
+#### Demo
+
+[Production](http://flex.invite-comm.jp)
+[Staging](http://flex.web4.invite-comm.jp)
+[Development](http://flex.dev.invite-comm.jp)
+
+
 #### .htaccess
 ```
 SetEnvIf Host (.*).(.*).(.*)$ CI_ENV=production
