@@ -5,3 +5,6 @@
 	path = application/modules/newmod
 	url = git@github.com:invitecomm/third-party-submodule.git
 	branch = develop
+[submodule "application/modules/ion_auth"]
+	path = application/modules/ion_auth
+	url = git@github.com:benedmunds/CodeIgniter-Ion-Auth.git
