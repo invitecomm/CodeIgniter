@@ -70,7 +70,14 @@ switch (ENVIRONMENT)
 		ini_set('display_errors', 1);
 	break;
 
+
 	case 'testing':
+	
+	case 'localhost':
+		error_reporting(-1);
+		ini_set('display_errors', 1);
+	break;
+
 	case 'production':
 		ini_set('display_errors', 0);
 		if (version_compare(PHP_VERSION, '5.3', '>='))
