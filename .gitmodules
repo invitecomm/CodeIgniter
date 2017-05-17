@@ -1,6 +1,0 @@
-[submodule "application/modules/ion_auth"]
-	path = application/modules/ion_auth
-	url = git@github.com:invitecomm/CodeIgniter-Ion-Auth.git
-[submodule "application/modules/auth"]
-	path = application/modules/auth
-	url = git@github.com:invitecomm/CodeIgniter-Ion-Auth.git
