@@ -40,6 +40,6 @@ RewriteBase /
 # Rewrite to index.php/URL
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond $1 !^(docs)(.*)$
+RewriteCond $1 !^(docs|user_guide)(.*)$
 #RewriteCond $1 !^(favicon\.ico|css|js|fonts|images|include|js|less|sass|scss)(.*)$
 RewriteRule ^(.*)$ index.php/$1 [L]
