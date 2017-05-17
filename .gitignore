@@ -1,5 +1,11 @@
 .DS_Store
 
+application/config/.svn
+application/config/development
+application/config/localhost
+application/config/production
+application/config/testing
+
 application/cache/*
 !application/cache/index.html
 !application/cache/.htaccess
