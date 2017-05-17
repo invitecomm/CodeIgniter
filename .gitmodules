@@ -1,0 +1,7 @@
+[submodule "application/modules/submodule"]
+	path = application/modules/submodule
+	url = git@github.com:invitecomm/third-party-submodule.git
+[submodule "application/modules/newmod"]
+	path = application/modules/newmod
+	url = git@github.com:invitecomm/third-party-submodule.git
+	branch = develop
