@@ -7,3 +7,6 @@
 [submodule "application/modules/submodule"]
 	path = application/modules/submodule
 	url = git@github.com:invitecomm/third-party-submodule.git
+[submodule "application/modules/modenv"]
+	path = application/modules/modenv
+	url = git@github.com:invitecomm/third-party-submodule.git
