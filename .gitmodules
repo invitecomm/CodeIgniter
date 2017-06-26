@@ -10,3 +10,9 @@
 [submodule "application/modules/modenv"]
 	path = application/modules/modenv
 	url = git@github.com:invitecomm/third-party-submodule.git
+[submodule "application/other/blue"]
+	path = application/other/blue
+	url = git@github.com:invitecomm/third-party-submodule.git
+[submodule "application/other/submodule"]
+	path = application/other/submodule
+	url = git@github.com:invitecomm/CodeIgniter.git
