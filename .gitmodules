@@ -15,4 +15,4 @@
 	url = git@github.com:invitecomm/third-party-submodule.git
 [submodule "application/other/submodule"]
 	path = application/other/submodule
-	url = git@github.com:invitecomm/CodeIgniter.git
+	url = git@github.com:invitecomm/third-party-submodule.git
