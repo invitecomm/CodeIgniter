@@ -21,5 +21,10 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('welcome_message');
+		echo FCPATH;
+		//echo "hmvc-rv";
+		//get_instance()->load->add_package_path('/foo/bar/blaa');
+		//print_r(get_instance()->load->get_package_paths(FALSE));
+
 	}
 }

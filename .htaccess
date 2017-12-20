@@ -1,0 +1,3 @@
+# Uncomment to test multiple environments
+#SetEnv CI_ENV testing
+

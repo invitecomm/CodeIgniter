@@ -1,0 +1,5 @@
+docs/build/*
+docs/cilexer/build/*
+docs/cilexer/dist/*
+docs/cilexer/pycilexer.egg-info/*
+/vendor/

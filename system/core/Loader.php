@@ -624,6 +624,7 @@ class CI_Loader {
 				log_message('info', 'Helper loaded: '.$helper);
 				continue;
 			}
+			
 
 			// No extensions found ... try loading regular helpers and/or overrides
 			foreach ($this->_ci_helper_paths as $path)
